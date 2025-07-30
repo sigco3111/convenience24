@@ -1,0 +1,13 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 편의점 건물 - 기본 모양 -->
+  <rect x="4" y="8" width="24" height="20" fill="#FF9E3D" />
+  <!-- 지붕 -->
+  <polygon points="4,8 16,2 28,8" fill="#D32F2F" />
+  <!-- 문 -->
+  <rect x="13" y="20" width="6" height="8" fill="#4A148C" />
+  <!-- 창문 -->
+  <rect x="7" y="12" width="5" height="5" fill="#90CAF9" />
+  <rect x="20" y="12" width="5" height="5" fill="#90CAF9" />
+  <!-- 24시간 텍스트 -->
+  <text x="16" y="17" font-family="Arial" font-size="6" fill="#FFFFFF" text-anchor="middle" font-weight="bold">24</text>
+</svg>
