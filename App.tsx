@@ -1145,7 +1145,7 @@ const gameReducer = (state: GameState, action: GameAction): GameState => {
       };
     case 'SHOW_NOTIFICATION':
       return { ...state, eventNotification: action.payload };
-    case 'CHEAT_ADD_MONEY': { return { ...state, money: state.money + 1000000 }; }
+
     case 'DISMISS_NOTIFICATION': { return { ...state, eventNotification: null }; }
     case 'TOGGLE_PAUSE': { return { ...state, isPaused: !state.isPaused }; }
     case 'CUSTOMER_LEAVE': { return { ...state, customers: state.customers.filter(c => c.id !== action.payload.customerId) } }
@@ -1226,9 +1226,7 @@ const App: React.FC = () => {
     dispatch({ type: 'EXPAND_STORE' });
   }, []);
   
-  const handleCheatAddMoney = useCallback(() => {
-    dispatch({ type: 'CHEAT_ADD_MONEY' });
-  }, []);
+
   
   const handleCleanStore = useCallback(() => {
     dispatch({ type: 'CLEAN_STORE' });
@@ -1315,7 +1313,7 @@ const App: React.FC = () => {
             cleanliness={gameState.cleanliness}
             satisfaction={gameState.satisfaction}
             regulars={gameState.regulars}
-            onCheatAddMoney={handleCheatAddMoney} 
+
             isPaused={gameState.isPaused}
             onTogglePause={handleTogglePause}
             dailyRankings={gameState.dailyRankings}

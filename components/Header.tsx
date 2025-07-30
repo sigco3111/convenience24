@@ -9,7 +9,7 @@ interface HeaderProps {
   cleanliness: number;
   satisfaction: number;
   regulars: number;
-  onCheatAddMoney: () => void;
+
   isPaused: boolean;
   onTogglePause: () => void;
   dailyRankings: Ranking[];
@@ -18,7 +18,7 @@ interface HeaderProps {
   onResetGame: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ money, time, weather, cleanliness, satisfaction, regulars, onCheatAddMoney, isPaused, onTogglePause, dailyRankings, onSaveGame, onLoadGame, onResetGame }) => {
+const Header: React.FC<HeaderProps> = ({ money, time, weather, cleanliness, satisfaction, regulars, isPaused, onTogglePause, dailyRankings, onSaveGame, onLoadGame, onResetGame }) => {
   const ticksPerDay = DAY_LENGTH_SECONDS * (1000 / TICK_RATE);
   const day = Math.floor(time / ticksPerDay) + 1;
   const timeOfDay = time % ticksPerDay;
@@ -54,13 +54,7 @@ const Header: React.FC<HeaderProps> = ({ money, time, weather, cleanliness, sati
     <header className="bg-red-600 text-white p-3 rounded-md border-2 border-black flex justify-between items-center text-sm shadow-lg flex-wrap gap-2">
       <div className="flex items-center gap-4">
         <h1 className="text-lg md:text-xl font-bold">24시 편의점 이야기</h1>
-        <button 
-          onClick={onCheatAddMoney}
-          className="bg-yellow-400 text-red-800 hover:bg-yellow-300 px-2 py-1 rounded-md border-2 border-black text-[10px] font-bold"
-          title="테스트용 자금 추가 (+1,000,000)"
-        >
-            +1M
-        </button>
+
       </div>
       <div className="flex gap-2 items-center flex-wrap justify-end">
          <div className="flex gap-1 bg-black/10 p-1 rounded-md">
