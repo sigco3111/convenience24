@@ -7,7 +7,7 @@
 
 선반에 물건을 채우고, 재고를 관리하며, 24시간 내내 다양한 손님들을 맞이하며 나만의 작은 편의점을 최고의 편의점으로 키워보세요.
 
-실행주소1 : https://convenience24.vercel.app/
+실행주소1 : https://sigco3111.github.io/convenience24/
 
 실행주소2 : https://dev-canvas-pi.vercel.app/
 
