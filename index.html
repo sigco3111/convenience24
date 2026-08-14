@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>24시 편의점 이야기</title>
+    <link rel="icon" type="image/svg+xml" href="/convenience24/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="/convenience24/favicon-192.png" />
+    <link rel="apple-touch-icon" href="/convenience24/favicon-192.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+      /* Simple pixelated font for the Kairosoft aesthetic */
+      body {
+        font-family: 'Press Start 2P', cursive;
+        overflow-y: auto; /* Allow vertical scroll for long content on mobile */
+      }
+      /* Custom selection color to match theme */
+      ::selection {
+        background-color: #fef08a; /* yellow-200 */
+        color: #b91c1c; /* red-700 */
+      }
+      @keyframes rain {
+          from { transform: translateY(-100px); opacity: 1; }
+          to { transform: translateY(100vh); opacity: 1; }
+      }
+      .animate-rain {
+          animation-name: rain;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+      }
+      @keyframes snow {
+          from { transform: translateY(-100px); }
+          to { transform: translateY(100vh); }
+      }
+      .animate-snow {
+          animation-name: snow;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+      }
+    </style>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "recharts": "https://esm.sh/recharts@^3.1.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/convenience24/assets/index-BMznAnt0.js"></script>
+</head>
+  <body class="bg-slate-800">
+    <div id="root"></div>
+  </body>
+</html>
